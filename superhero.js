@@ -354,7 +354,7 @@ document.addEventListener('click',handleClick);
 function init(){
     switch(global.currentPage){
         case '/':
-        case '/characterdisplay.html':
+        case '/index.html':
             console.log('Home Page');
             fetchCharacters();
             autoDisplayCharactersList();
