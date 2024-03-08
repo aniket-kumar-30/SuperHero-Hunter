@@ -10,18 +10,18 @@ const global = {
 }
 console.log(global.currentPage)
 // Highlight active nav link
-function highlightActiveLink(){
-    const links = document.querySelectorAll('.nav-item');
-    const currentPage = global.currentPage.split('/')[0];
-    console.log(currentPage)
-    links.forEach(link => {
-        if(link.getAttribute('href') == currentPage){
-            link.classList.add('active-nav');
-        }else{
-            link.classList.remove('active-nav');
-        }
-    });
-}
+// function highlightActiveLink(){
+//     const links = document.querySelectorAll('.nav-item');
+//     const currentPage = global.currentPage.split('/')[0];
+//     console.log(currentPage)
+//     links.forEach(link => {
+//         if(link.getAttribute('href') == currentPage){
+//             link.classList.add('active-nav');
+//         }else{
+//             link.classList.remove('active-nav');
+//         }
+//     });
+// }
 
 
 // fetch superhero characters
@@ -353,17 +353,17 @@ document.addEventListener('click',handleClick);
 
 function init(){
     switch(global.currentPage){
-        case '/home':
+        case '/home.html':
             console.log('Home Page');
             fetchCharacters();
             autoDisplayCharactersList();
             getFavourteCharacters();
             break;
-        case '/characterdetails':
+        case '/characterdetails.html':
             console.log('Character Detail page');
            fetchAndShowCharacterDetails()
             break;
-        case '/favouritecharacters':
+        case '/favouritecharacters.html':
             console.log('Favourte Meal page');
             favouriteCharacters();
             showORHideDeleteAllIcon();
