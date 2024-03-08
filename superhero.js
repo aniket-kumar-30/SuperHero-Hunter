@@ -353,17 +353,17 @@ document.addEventListener('click',handleClick);
 
 function init(){
     switch(global.currentPage){
-        case '/home.html':
+        case '/home':
             console.log('Home Page');
             fetchCharacters();
             autoDisplayCharactersList();
             getFavourteCharacters();
             break;
-        case '/characterdetails.html':
+        case '/characterdetails':
             console.log('Character Detail page');
            fetchAndShowCharacterDetails()
             break;
-        case '/favouritecharacters.html':
+        case '/favouritecharacters':
             console.log('Favourte Meal page');
             favouriteCharacters();
             showORHideDeleteAllIcon();
