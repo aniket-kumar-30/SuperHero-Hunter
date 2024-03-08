@@ -365,7 +365,7 @@ function init(){
             console.log('Character Detail page');
            fetchAndShowCharacterDetails()
             break;
-        case '/favouritecharacters.html':
+        case '/favouritecharacters':
             console.log('Favourte Meal page');
             favouriteCharacters();
             showORHideDeleteAllIcon();
