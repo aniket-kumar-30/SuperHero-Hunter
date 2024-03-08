@@ -369,7 +369,7 @@ function init(){
             showORHideDeleteAllIcon();
             break;
     }
-    highlightActiveLink();
+    // highlightActiveLink();
     // fetchMealList();
     // fetchMealData();
 }
