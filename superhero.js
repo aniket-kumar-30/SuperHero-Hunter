@@ -12,7 +12,7 @@ console.log(global.currentPage)
 // Highlight active nav link
 function highlightActiveLink(){
     const links = document.querySelectorAll('.nav-item');
-    const currentPage = global.currentPage.split('/')[3];
+    const currentPage = global.currentPage.split('/')[0];
     console.log(currentPage)
     links.forEach(link => {
         if(link.getAttribute('href') == currentPage){
