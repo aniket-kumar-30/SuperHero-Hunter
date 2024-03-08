@@ -3,6 +3,7 @@ const displayCharacters = document.getElementById('characters-list')
 const listContainer = document.getElementById('list-container');
 let [timestamp,apikey,hashValue] = [ts,publickey,hashvalue];
 let favCharacterList = [];
+let charactersFromDB;
 
 // global variable have current page path
 const global = {
