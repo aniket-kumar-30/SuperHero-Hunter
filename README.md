@@ -27,3 +27,9 @@ https://gateway.marvel.com:443/v1/public/characters/
 
 ### Favourite Page Image
 <img width="400" height="200" src="./static/Screenshot 2024-03-08 164348.png">
+
+## Demo
+ [SuperHero Hunter App](https://adorable-youtiao-3915df.netlify.app/favouritecharacters)
+
+## Author
+- [@Aniket Kumar](https://github.com/aniket-kumar-30/SuperHero-Hunter)
