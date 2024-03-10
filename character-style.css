@@ -99,11 +99,15 @@ header{
 /* Input container */
 #input-container{
     width: 100%;
-    display: grid;
-    grid-template-columns: 8fr 3fr;
+    display: flex;
+    flex-wrap: wrap;
     max-width: 600px;
     margin: auto;
     position: relative;
+}
+#input-box{
+    width: 60%;
+    min-width: 150px;
 }
 
 
@@ -112,11 +116,14 @@ header{
     outline: none;
     border: none;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 #submit-button{
     background-color: #757070;
     margin-left: 10px;
     cursor: pointer;
+    width: 20%;
+    min-width: 70px;
 }
 /* list containers */
 #list-container{
@@ -267,6 +274,8 @@ header{
     line-height: 1.4;
 }
 
+/* Favourite page css */
+
 #favourite-characters{
     width: 100%;
     margin-top: 100px;
@@ -326,7 +335,7 @@ header{
     display: flex;
     justify-content: first baseline;
     align-items: end;
-    font-size: 2rem;
+    font-size: 2em;
     /* color: rgb(227, 213, 213); */
     color: goldenrod;
     height: 100%;
@@ -568,6 +577,14 @@ header{
         font-size: 4em;
     }
 
+    #favourite-characters h2{
+        font-size: 2em;
+    }
+    #fav-character-list div li{
+        font-size: 1.8em;
+    }
+    
+
 }
 
 @media screen and (max-width: 400px){
@@ -583,6 +600,13 @@ header{
     .content h2{
         left: 12%;
     }
+    #favourite-characters h2{
+        font-size: 1.5em;
+    }
+    #fav-character-list div li{
+        font-size: 1.2em;
+    }
+
 }
 @media screen and (max-width: 1100px){
     .content h2{

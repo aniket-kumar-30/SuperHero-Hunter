@@ -132,7 +132,9 @@ async function fetchAndShowCharacterDetails(){
         document.querySelector('.content').style.display = 'block';
     }else{
         document.querySelector('.content').style.display = 'none';
-        console.log(character);
+        const res = await fetch(`${character.comics.collectionURI}?ts=${timestamp}&apikey=${apikey}&hash=${hashValue}`);
+        const result = await res.json()
+        console.log(result);
         document.getElementById('character-details').innerHTML = `
             <div class="character-img">
                 <img src=${character.thumbnail['path']+"."+character.thumbnail['extension']}>
@@ -143,25 +145,25 @@ async function fetchAndShowCharacterDetails(){
                 <div class="comics-info">
                     <p>Comics Avaliable : ${character.comics.available}</p>
                     <button class="link-btn">
-                        <a href=${character.comics.collectionURI}>Comics Collection</a>
+                        <a href=${character.comics.collectionURI}?ts=${timestamp}&apikey=${apikey}&hash=${hashValue} target="_blank">Comics Collection</a>
                     </button>
                 </div>
                 <div class="events-info">
                     <p>Events Avaliable : ${character.events.available}</p>
                     <button class="link-btn">
-                        <a href=${character.events.collectionURI}>Events Collection</a>
+                        <a href=${character.events.collectionURI}?ts=${timestamp}&apikey=${apikey}&hash=${hashValue} target="_blank">Events Collection</a>
                     </button>
                 </div>
                 <div class="events-info">
                     <p>Series Avaliable : ${character.series.available}</p>
                     <button class="link-btn">
-                        <a href=${character.series.collectionURI}>Seriess Collection</a>
+                        <a href=${character.series.collectionURI}?ts=${timestamp}&apikey=${apikey}&hash=${hashValue} target="_blank">Seriess Collection</a>
                     </button>
                 </div>
                 <div class="stories-info">
                     <p>Stories Avaliable : ${character.stories.available}</p>
                     <button class="link-btn">
-                        <a href=${character.stories.collectionURI}>Stories Collection</a>
+                        <a href=${character.stories.collectionURI}?ts=${timestamp}&apikey=${apikey}&hash=${hashValue} target="_blank">Stories Collection</a>
                     </button>
                 </div>
             </div>
@@ -329,6 +331,7 @@ function displayWords(name){
 }
 
 async function handleClick(e){
+    // e.preventDefault()
     if(e.target.id == 'submit-button'){
         if(input.value.trim().length < 1){
             return false;
@@ -355,7 +358,7 @@ document.addEventListener('click',handleClick);
 function init(){
     switch(global.currentPage){
         case '/':
-        case '/index.html':
+        case '/index':
             console.log('Home Page');
             fetchCharacters();
             autoDisplayCharactersList();
