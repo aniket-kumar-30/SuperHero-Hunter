@@ -583,8 +583,12 @@ header{
     #fav-character-list div li{
         font-size: 1.8em;
     }
-    
 
+    .backToHome{
+        padding: 0.3rem 0.7rem;
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
 }
 
 @media screen and (max-width: 400px){
